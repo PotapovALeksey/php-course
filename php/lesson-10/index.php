@@ -21,21 +21,37 @@
         ];
 
         
-        echo '<pre>';
-        print_r($arr);
-        echo '</pre>';
-        $arr2 = [];
+        // echo '<pre>';
+        // print_r($arr);
+        // echo '</pre>';
+        // $arr2 = [];
 
-        $array1 = array("color" => "red", 2, 4);
-        $array2 = array("a", "b", "color" => "green", "shape" => "trapezoid", 4);
+        // $array1 = array("color" => "red", 2, 4);
+        // $array2 = array("a", "b", "color" => "green", "shape" => "trapezoid", 4);
 
 
-        $result = array_rand($array1, 2);
+        // $result = array_rand($array1, 2);
+        // echo '<pre>';
+        // print_r($result);
+        // echo '</pre>';
+        // echo '<pre>';
+        // print_r($array1);
+        // echo '</pre>';
+        $city  = "San Francisco";
+        $state = "CA";
+        $event = "SIGGRAPH";
+      
+
+        $result = compact('city', 'state', 'event');
+
+        extract($result);
+
+        echo $city;
+        echo '<br>';
+        echo $state;
+
         echo '<pre>';
         print_r($result);
-        echo '</pre>';
-        echo '<pre>';
-        print_r($array1);
         echo '</pre>';
     ?>
     <!-- 
@@ -47,7 +63,9 @@
         array_values($arr) = возвращает массив значений arr;
         array_merge($arr1, $arr2) = сливает массивы в один , возвращает новый массив , одинаковые строковые значения                                    перезаписывает;
         array_rand($arr1, 2) = выбирает случайный ключ массива;
-    
+        compact($str, $str2) = создаёт асоциативный массив из переменных;
+        extract($arr) = распаковывает в переменные из асоциативного массива;
+
     
     
     
